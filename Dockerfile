@@ -2,7 +2,7 @@ FROM debian
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt upgrade -y && apt install -y \
     ssh tmate ufw
-RUN ufw enable && ufw allow 443
+RUN sudo ufw enable && sudo ufw allow 443
     
 RUN mkdir /run/sshd \
     && echo "sleep 5" >> /openssh.sh \
