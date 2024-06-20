@@ -1,7 +1,7 @@
 FROM debian
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt upgrade -y && apt install -y \
-    ssh tmate ufw
+    ssh tmate ufw sudo
 RUN sudo ufw enable && sudo ufw allow 443
     
 RUN mkdir /run/sshd \
